@@ -1,0 +1,12 @@
+body {
+  font-family: sans-serif;
+}
+
+#color-visual {
+  height: 10em;
+  width: 10em;
+}
+
+.hex-value {
+  font-family: monospace;
+}

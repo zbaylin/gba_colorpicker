@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>GBA Color Picker</title>
+</head>
+<body>
+  <script src="js/main.js"></script>
+  <h1>GBA Color Picker (5:5:5 Color)</h1>
+  <h2>Color</h2>
+  <table>
+    <tr>
+      <td>Red</td>
+      <td>
+        <input type="range" name="red" id="red-slider" value="0" min="0" max="31">
+      </td>
+      <td class="hex-value" id="red-slider-output"></td>
+    </tr>
+    <tr>
+      <td>Green</td>
+      <td>
+        <input type="range" name="green" id="green-slider" value="0" min="0" max="31">
+      </td>
+      <td class="hex-value" id="green-slider-output"></td>
+    </tr>
+    <tr>
+      <td>Blue</td>
+      <td>
+        <input type="range" name="blue" id="blue-slider" min="0" value="0" max="31">
+      </td>
+      <td class="hex-value" id="blue-slider-output"></td>
+    </tr>
+  </table>
+  <div id="color-visual"></div>
+  <p class="hex-value" id="color-hex-string"></p>
+  <span>
+    <input id="color-name-input" type="text" placeholder="COLOR_NAME">
+    <button id="color-name-button">Add to Definitions</button>
+  </span>
+
+  <h2>Definitions</h2>
+  <textarea name="definitions" id="definitions-textarea" cols="60" rows="10"></textarea>
+  <br>
+  <button onclick="copyDefinitions()">Copy Definitions</button>
+</body>
+</html>
