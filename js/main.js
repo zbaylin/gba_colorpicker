@@ -27,18 +27,28 @@ let setupSliders = () => {
   });
 };
 
-let getColorFromSliders = () => {
+let getHTMLColorFromSliders = () => {
   let red = parseInt(sliders[0].value) / 31 * 255;
   let green = parseInt(sliders[1].value) / 31 * 255;
   let blue = parseInt(sliders[2].value) / 31 * 255;
   return [red, green, blue];
 }
 
-let updateVis = () => {
-  let [red, green, blue] = getColorFromSliders();
-  let vis = document.getElementById("color-visual");
+let getGBAColorFromSliders = () => {
+  let red = parseInt(sliders[0].value) * 8;
+  let green = parseInt(sliders[1].value) * 8;
+  let blue = parseInt(sliders[2].value) * 8;
+  return [red, green, blue];
+}
 
-  vis.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+let updateVis = () => {
+  let [redHTML, greenHTML, blueHTML] = getHTMLColorFromSliders();
+  let visHTML = document.getElementById("color-visual-html");
+  visHTML.style.backgroundColor = `rgb(${redHTML}, ${greenHTML}, ${blueHTML})`;
+
+  let [redGBA, greenGBA, blueGBA] = getGBAColorFromSliders();
+  let visGBA = document.getElementById("color-visual-gba");
+  visGBA.style.backgroundColor = `rgb(${redGBA}, ${greenGBA}, ${blueGBA})`;
 }
 
 let updateHexString = () => {

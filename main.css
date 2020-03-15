@@ -2,7 +2,12 @@ body {
   font-family: sans-serif;
 }
 
-#color-visual {
+#color-visual-html {
+  height: 10em;
+  width: 10em;
+}
+
+#color-visual-gba {
   height: 10em;
   width: 10em;
 }
